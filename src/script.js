@@ -22,6 +22,37 @@ const questions = [
 	},
 ];
 
+const showHighScoreScreen = () => {
+	welcomeScreen.style.display = "none";
+	quizScreen.style.display = "none";
+	resultsScreen.style.display = "none";
+	highScoreScreen.style.display = "block";
+
+	const highScores = window.localStorage.getItem("highScores");
+
+	document.getElementById("showHighScores").style.display = "none";
+	document.getElementById("goHome").style.display = "block";
+
+	document.getElementById("goHome").addEventListener("click", () => {
+		document.getElementById("showHighScores").style.display = "block";
+		document.getElementById("goHome").style.display = "none";
+		welcomeScreen.style.display = "block";
+		highScoreScreen.style.display = "none";
+	});
+	document.getElementById("highScoreList").innerHTML = "";
+	if (highScores) {
+		JSON.parse(highScores).forEach((score) => {
+			const highScoreListEl = document.createElement("li");
+			highScoreListEl.innerHTML = score.initials + " - " + score.score;
+			document.getElementById("highScoreList").appendChild(highScoreListEl);
+		});
+	}
+};
+
+document
+	.getElementById("showHighScores")
+	.addEventListener("click", showHighScoreScreen);
+
 const startQuiz = () => {
 	welcomeScreen.style.display = "none";
 	quizScreen.style.display = "block";
@@ -31,23 +62,6 @@ const startQuiz = () => {
 	// }
 	let wrongAnswerIndexes = [];
 	let correctAnswerIndexes = [];
-
-	const showHighScoreScreen = () => {
-		welcomeScreen.style.display = "none";
-		quizScreen.style.display = "none";
-		resultsScreen.style.display = "none";
-		highScoreScreen.style.display = "block";
-
-		const highScores = window.localStorage.getItem("highScores");
-
-		if (highScores) {
-			JSON.parse(highScores).forEach((score) => {
-				const highScoreListEl = document.createElement("li");
-				highScoreListEl.innerHTML = score.initials + " - " + score.score;
-				document.getElementById("highScoreList").appendChild(highScoreListEl);
-			});
-		}
-	};
 
 	const storeResults = (event) => {
 		event.preventDefault();
@@ -86,6 +100,9 @@ const startQuiz = () => {
 			window.localStorage.clear();
 		});
 
+	let count = 75;
+	let quizFinish = false;
+
 	function endQuiz() {
 		quizScreen.style.display = "none";
 		resultsScreen.style.display = "block";
@@ -94,14 +111,17 @@ const startQuiz = () => {
 		).innerHTML = `Your score is ${correctAnswerIndexes.length}`;
 		console.log("wrong", wrongAnswerIndexes);
 		console.log("correct", correctAnswerIndexes);
+		quizFinish = true;
 	}
-
-	let count = 75;
 
 	function updateTimer() {
 		count = Math.max(count - 1, 0);
 		document.getElementById("timer").innerHTML = count;
 		const timeout = setTimeout(updateTimer, 1000);
+		if (quizFinish === true) {
+			clearTimeout(timeout);
+			document.getElementById("timer").innerHTML = "";
+		}
 		if (count <= 0) {
 			clearTimeout(timeout);
 			endQuiz();
@@ -118,6 +138,8 @@ const startQuiz = () => {
 
 		for (let i = 0; i < question.options.length; i++) {
 			const optionListEl = document.createElement("li");
+			optionListEl.className =
+				"list-group-item d-flex justify-content-between align-items-start list-group-item-action";
 			const option = question.options[i];
 			optionListEl.innerHTML = option;
 

@@ -7,40 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fill in the Blank</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
 </head>
 
 <body>
     <!-- welcome section -->
-    <header>
-        <div>Show high scores</div>
+    <header class="d-flex flex-wrap justify-content-between px-3 py-3 mb-4 border-bottom">
+        <button class="btn btn-link" id="showHighScores">Show high scores</button>
+        <button class="btn btn-link" id="goHome">Home</button>
+
         <div id="timer"></div>
     </header>
-    <div id="welcome">
+    <div id="welcome" class="container">
         <h1>Welcome to the Coding Quiz</h1>
         <p>Click Start to Begin</p>
-        <button id="startBtn">Start</button>
+        <button id="startBtn" class="btn btn-primary btn-lg">Start</button>
     </div>
     <!-- quiz section -->
-    <div id="quiz">
-        <h1 id="question"></h1>
-        <ul id="answerOptions"></ul>
+    <div id="quiz" class="container">
+        <h1 id="question">Bluh bluh?</h1>
+        <ul id="answerOptions" class="list-group list-group-numbered">
+            <li>
+                bluh
+            </li>
+            <li>
+                bluh bluh
+            </li>
+        </ul>
     </div>
     <!-- results section -->
-    <div id="results">
+    <div id="results" class="container">
         <h1>All done!</h1>
         <h2 id="totalCorrect"></h2>
         <form id="intialsForm">
-            <label for="initials">Initials</label>
+            <label for="initials" class="form-label">Initials</label>
             <input required="required" minlength="2" type="text" id="initials" />
-            <button type="submit" id="submitResults">Submit</button>
+            <button type="submit" id="submitResults" class="btn btn-outline-primary">Submit</button>
         </form>
     </div>
-    <div id="highScores">
+    <div id="highScores" class="container">
+        <h1>High scores</h1>
         <ul id="highScoreList">
 
         </ul>
-        <button id="clearHighScoreList">Clear Scores</button>
+        <button id="clearHighScoreList" class="btn btn-danger btn-lg">Clear Scores</button>
     </div>
     <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
     <script src="src/script.js"></script>

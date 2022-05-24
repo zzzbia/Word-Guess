@@ -9,3 +9,11 @@
 #highScores {
     display: none;
 }
+
+#answerOptions>li {
+    cursor: pointer;
+}
+
+#goHome {
+    display: none;
+}
