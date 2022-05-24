@@ -12,6 +12,10 @@
 
 <body>
     <!-- welcome section -->
+    <header>
+        <div>Show high scores</div>
+        <div id="timer"></div>
+    </header>
     <div id="welcome">
         <h1>Welcome to the Coding Quiz</h1>
         <p>Click Start to Begin</p>
@@ -24,10 +28,21 @@
     </div>
     <!-- results section -->
     <div id="results">
-        <h1 id="userResult"></h1>
-        <h2>You got <span id="totalCorrect"></span> correct</h2>
-        <h2>You got <span id="totalIncorrect"></span> incorrect</h2>
+        <h1>All done!</h1>
+        <h2 id="totalCorrect"></h2>
+        <form id="intialsForm">
+            <label for="initials">Initials</label>
+            <input required="required" minlength="2" type="text" id="initials" />
+            <button type="submit" id="submitResults">Submit</button>
+        </form>
     </div>
+    <div id="highScores">
+        <ul id="highScoreList">
+
+        </ul>
+        <button id="clearHighScoreList">Clear Scores</button>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
     <script src="src/script.js"></script>
 </body>
 
