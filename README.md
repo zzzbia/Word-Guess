@@ -29,3 +29,6 @@
 - [MDN Web API Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 - [Javascript Multiple Choice Questions](https://www.interviewbit.com/javascript-mcq/)
 - [MDN Array Sort Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+https://stackoverflow.com/questions/16334265/form-gets-submitted-twice-on-button-click
+https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
+https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById

@@ -1,3 +1,10 @@
+:root {
+    --brightpurple: #C576F6;
+    --lightpurple: #D7A1F9;
+    --medpurple: #A020F0;
+    --darkpurple: #51087E;
+}
+
 #quiz {
     display: none;
 }
@@ -23,7 +30,24 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
     font-family: 'Poppins', 'Roboto', 'Arial', 'sans-serif';
+    color: var(--darkpurple);
+}
+
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--medpurple);
+    font-weight: 400;
+    font-size: medium;
+}
+
+#startBtn {
+    background-color: var(--brightpurple);
+    border-color: var(--medpurple);
+}
+
+#startBtn:hover {
+    background-color: var(--medpurple);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
