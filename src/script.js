@@ -6,19 +6,42 @@ const highScoreScreen = document.getElementById("highScores");
 
 const questions = [
 	{
-		question: 'The "function" and " var" are known as ____',
+		question: 'The "function" and " var" are known as ______',
 		options: ["Keywords", "Data types", "Declaration Statements", "Prototypes"],
 		answer: "Declaration Statements",
 	},
 	{
-		question: "what is 5 + 4",
-		options: [32, 9, 2, 12],
-		answer: 9,
+		question:
+			"Which function is used to serialize an object into a JSON string in Javascript",
+		options: ["stringify()", "parse()", "convert()", "None of the above"],
+		answer: "stringify()",
 	},
 	{
-		question: "what is 1 + 1",
-		options: [32, 9, 2, 12],
-		answer: 2,
+		question: "Which of the following are closures in Javascript?",
+		options: ["Variables", "Functions", "Objects", "All of the above"],
+		answer: "All of the above",
+	},
+	{
+		question:
+			"What keyword is used to declare an asynchronous function in Javascript?",
+		options: ["async", "await", "setTimeout", "None of the above"],
+		answer: "async",
+	},
+	{
+		question: "Which of the following is NOT a Javascript framework?",
+		options: ["Node", "Vue", "React", "Cassandra"],
+		answer: "Cassandra",
+	},
+	{
+		question:
+			"Which of the following methods can be used to display data in some form using Javascript?",
+		options: [
+			"document.write()",
+			"console.log()",
+			"window.alert()",
+			"All of the above",
+		],
+		answer: "All of the above",
 	},
 ];
 
@@ -139,7 +162,7 @@ const startQuiz = () => {
 		for (let i = 0; i < question.options.length; i++) {
 			const optionListEl = document.createElement("li");
 			optionListEl.className =
-				"list-group-item d-flex justify-content-between align-items-start list-group-item-action";
+				"list-group-item d-flex justify-content-between align-items-start list-group-item-action list-group-item-primary";
 			const option = question.options[i];
 			optionListEl.innerHTML = option;
 
