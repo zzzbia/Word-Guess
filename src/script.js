@@ -4,6 +4,8 @@ const resultsScreen = document.getElementById("results");
 const feedback = document.getElementById("feedback");
 const highScoreScreen = document.getElementById("highScores");
 
+// Array of objects (questions) with the multiple choice values as an options array, and the answer key
+// This is mutatable, so we could substiture different questions with different options and answers and it would work
 const questions = [
 	{
 		question: 'The "function" and " var" are known as ______',
@@ -80,6 +82,7 @@ const startQuiz = () => {
 	welcomeScreen.style.display = "none";
 	quizScreen.style.display = "block";
 
+	// The solution with a for loop did not work,so ignore the comment below.
 	// for (let i = 0; i < questions.length; i++) {
 	// 	document.getElementById("question").innerHTML = questions[i].question;
 	// }
@@ -87,6 +90,7 @@ const startQuiz = () => {
 	let correctAnswerIndexes = [];
 
 	const storeResults = (event) => {
+		console.log("hiii");
 		event.preventDefault();
 		const initials = document.getElementById("initials").value;
 
@@ -96,18 +100,19 @@ const startQuiz = () => {
 		//     score: 99
 		// }
 
-		let scores = [];
 		const localStorageValue = window.localStorage.getItem("highScores");
+		const scores = localStorageValue ? JSON.parse(localStorageValue) : [];
 
-		if (localStorageValue) {
-			scores = JSON.parse(localStorageValue);
-		}
+		// if (localStorageValue) {
+		// 	console.log("did it work?", localStorageValue);
+		// 	scores = JSON.parse(localStorageValue);
+		// }
 
 		scores.push({
 			initials: initials,
 			score: correctAnswerIndexes.length,
 		});
-
+		console.log("Checking scores", scores);
 		window.localStorage.setItem("highScores", JSON.stringify(scores));
 
 		showHighScoreScreen();
@@ -121,6 +126,7 @@ const startQuiz = () => {
 		.getElementById("clearHighScoreList")
 		.addEventListener("click", () => {
 			window.localStorage.clear();
+			window.location.reload();
 		});
 
 	let count = 75;
@@ -170,11 +176,14 @@ const startQuiz = () => {
 				// condition to check if answer is correct
 				if (option === question.answer) {
 					console.log("correct");
+					document.getElementById("guess").innerHTML = "That is correct!";
+
 					correctAnswerIndexes.push(index);
 				} else {
 					count = count - 10;
 					console.log("incorrect");
 					wrongAnswerIndexes.push(index);
+					document.getElementById("guess").innerHTML = "That is Incorrect!";
 				}
 
 				/*condition to check if index + 1 exists in 
