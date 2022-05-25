@@ -90,8 +90,9 @@ const startQuiz = () => {
 	let correctAnswerIndexes = [];
 
 	const storeResults = (event) => {
-		console.log("hiii");
+		event.stopImmediatePropagation();
 		event.preventDefault();
+		console.log("hiii");
 		const initials = document.getElementById("initials").value;
 
 		// we will store the scores in an array of:
