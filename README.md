@@ -19,6 +19,9 @@
 - [References](#References)
 
 ## 🖼️ Images and Screenshots
+ ![WelcomePage](https://github.com/zzzbia/Word-Guess/blob/main/assets/welcomepage.png?raw=true)
+ ![QuestionScreen](https://github.com/zzzbia/Word-Guess/blob/main/assets/examplequestion1.png?=raw=true)
+
 
 ## Deployed Link
  - [Try out the Javascript Game!](https://zzzbia.github.io/Word-Guess/)
