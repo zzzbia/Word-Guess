@@ -1,7 +1,8 @@
 #  Javascript Word-Guessing Game
 
 ## ✏️ Description
- 
+  Creating a Javascript Fill in the Blank Game, that allows the user to start a new game. Every new game instance entails a countdown time of 75 seconds. Each time a wrong answer is input, the user will be penalized by losing 10 seconds. 
+
 ## Expectations
 -  Quiz starts with the Start Button
 - Timer starts after the Start Button is clicked
@@ -29,6 +30,7 @@
 - [MDN Web API Local Storage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 - [Javascript Multiple Choice Questions](https://www.interviewbit.com/javascript-mcq/)
 - [MDN Array Sort Method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-https://stackoverflow.com/questions/16334265/form-gets-submitted-twice-on-button-click
-https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
-https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById
+- [Stack Overflow Question on Double Form Submission](https://stackoverflow.com/questions/16334265/form-gets-submitted-twice-on-button-click)
+- [Stack Overflow How to Reload a Page](https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript)
+- [MDN getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+- [Stack Overflow Highlight List Item Group ](https://stackoverflow.com/questions/20256516/highlight-list-item-in-bootstrap)

@@ -79,3 +79,10 @@ p {
     background-color: var(--brightpurple);
     color: var(--white);
 }
+
+.counterText {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: var(--medpurple);
+    font-weight: 700;
+    font-size: large;
+}
