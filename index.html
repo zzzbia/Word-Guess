@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fill in the Blank</title>
+    <title>Javascript Quiz - Try your best</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -19,8 +19,8 @@
 <body>
     <!-- navigation, header -->
     <header class="d-flex flex-wrap justify-content-between px-3 py-3 mb-4 border-bottom">
-        <button class="btn custom-btn" id="showHighScores">Show high scores</button>
-        <button class="btn custom-btn" id="goHome">Home</button>
+        <button class="btn custom-btn link-primary" id="showHighScores">Show high scores</button>
+        <button class="btn custom-btn link-primary" id="goHome">Home</button>
         <div id="timer" class="counterText"></div>
     </header>
     <!-- welcome section -->
@@ -64,10 +64,10 @@
             </div>
         </form>
     </div>
-    <div id="highScores" class="container">
-        <div class="row">
-            <h1 class="col-md-6 mx-auto card px-4 py-4">High scores</h1>
-            <ul id="highScoreList"></ul>
+    <div id="highScores" class="container card col-md-6 mx-auto px-4 py-4">
+        <div class="">
+            <h1 class="">High scores</h1>
+            <ul class="list-group my-4" id="highScoreList"></ul>
             <button id="clearHighScoreList" class="btn custom-btn btn-lg">Clear Scores</button>
         </div>
     </div>

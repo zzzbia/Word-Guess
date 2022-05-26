@@ -25,6 +25,7 @@
 
 ## Deployed Link
  - [Try out the Javascript Game!](https://zzzbia.github.io/Word-Guess/)
+ 
 ## Wireframe
 - [Figma Wireframe](https://www.figma.com/file/QHN0OxxGWcH5wsvnEJS00G/Code-Quiz?node-id=13%3A247)
 

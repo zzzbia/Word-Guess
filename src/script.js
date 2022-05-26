@@ -85,6 +85,7 @@ const showHighScoreScreen = () => {
 	if (highScores) {
 		JSON.parse(highScores).forEach((score) => {
 			const highScoreListEl = document.createElement("li");
+			highScoreListEl.className = "list-group-item";
 			highScoreListEl.innerHTML = score.initials + " - " + score.score;
 			highScoreList.appendChild(highScoreListEl);
 		});
