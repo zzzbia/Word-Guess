@@ -3,6 +3,7 @@
     --lightpurple: #D7A1F9;
     --medpurple: #A020F0;
     --darkpurple: #51087E;
+    --white: #ffff;
 }
 
 #quiz {
@@ -30,7 +31,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.card-title {
     font-family: 'Poppins', 'Roboto', 'Arial', 'sans-serif';
     color: var(--darkpurple);
 }
@@ -50,4 +52,30 @@ p {
 #startBtn:hover {
     background-color: var(--medpurple);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* HighScores Clearing button */
+#clearHighScoreList {
+    background-color: var(--brightpurple);
+    border-color: var(--medpurple);
+}
+
+#clearHighScoreList:hover {
+    background-color: var(--medpurple);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.custom-btn {
+    background-color: var(--brightpurple);
+    border-color: var(--medpurple);
+}
+
+.custom-btn:hover {
+    background-color: var(--medpurple);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.list-group-hover .list-group-item:hover {
+    background-color: var(--brightpurple);
+    color: var(--white);
 }

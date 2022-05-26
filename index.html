@@ -17,22 +17,25 @@
 </head>
 
 <body>
-    <!-- welcome section -->
+    <!-- navigation, header -->
     <header class="d-flex flex-wrap justify-content-between px-3 py-3 mb-4 border-bottom">
-        <button class="btn btn-link" id="showHighScores">Show high scores</button>
-        <button class="btn btn-link" id="goHome">Home</button>
+        <button class="btn custom-btn" id="showHighScores">Show high scores</button>
+        <button class="btn custom-btn" id="goHome">Home</button>
 
         <div id="timer"></div>
     </header>
+    <!-- welcome section -->
     <div id="welcome" class="container row mx-auto">
-        <div class="col-md-6">
-            <h1>Test Your Javascript Knowledge!</h1>
-            <p>You will lose 10 seconds for each wrong answer. Choose wisely!</p>
-            <p>Click Start to Begin</p>
-            <button id="startBtn" class="btn btn-primary btn-lg">Start</button>
-        </div>
-        <div class=" col-md-6 py-2">
-            <img src="./assets/cats-keyboard.gif" class="img-fluid" alt="cat banging paws on keyboard">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Test Your Javascript Knowledge!</h1>
+                <p>You will lose 10 seconds for each wrong answer. Choose wisely!</p>
+                <p>Click Start to Begin</p>
+                <button id="startBtn" class="btn btn-primary btn-lg">Start</button>
+            </div>
+            <div class="col-md-6 py-2">
+                <img src="./assets/cats-keyboard.gif" class="img-fluid" alt="cat banging paws on keyboard">
+            </div>
         </div>
 
     </div>
@@ -40,7 +43,7 @@
     <div id="quiz" class="container">
         <h1 id="question"></h1>
         <div>
-            <ul id="answerOptions" class="list-group list-group-numbered ">
+            <ul id="answerOptions" class="list-group list-group-numbered list-group-hover">
             </ul>
             <hr>
             <p id="guess"></p>
@@ -63,9 +66,11 @@
         </form>
     </div>
     <div id="highScores" class="container">
-        <h1>High scores</h1>
-        <ul id="highScoreList"></ul>
-        <button id="clearHighScoreList" class="btn btn-danger btn-lg">Clear Scores</button>
+        <div class="row">
+            <h1 class="col-md-6 mx-auto card px-4 py-4">High scores</h1>
+            <ul id="highScoreList"></ul>
+            <button id="clearHighScoreList" class="btn custom-btn btn-lg">Clear Scores</button>
+        </div>
     </div>
     <!-- <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script> -->
     <script src="src/script.js"></script>

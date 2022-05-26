@@ -230,7 +230,7 @@ const startQuiz = () => {
 			const optionListEl = document.createElement("li");
 			// give some oomph with classes
 			optionListEl.className =
-				"list-group-item d-flex align-items-start list-group-item-action";
+				"list-group-item d-flex align-items-start list-group-item-action list-group-hover";
 
 			// sets the content of the li element to the option text
 			const option = question.options[i];
