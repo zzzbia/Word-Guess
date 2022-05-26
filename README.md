@@ -21,8 +21,9 @@
 ## 🖼️ Images and Screenshots
 
 ## Deployed Link
-
+ - [Try out the Javascript Game!](https://zzzbia.github.io/Word-Guess/)
 ## Wireframe
+- [Figma Wireframe](https://www.figma.com/file/QHN0OxxGWcH5wsvnEJS00G/Code-Quiz?node-id=13%3A247)
 
 ## 📝 Reference Links
 - [W3 Schools Append Child](https://www.w3schools.com/jsref/met_node_appendchild.asp)
